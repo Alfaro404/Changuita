@@ -1,12 +1,10 @@
-/* General */
+/* Agrega el estilo y la animación para el corazón (esto es similar al CSS que ya tienes) */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  overflow-x: hidden; /* Deshabilitar solo scroll horizontal */
-  color: #fff; /* Color de texto por defecto en blanco */
+  color: #fff;
 }
 
-/* Pantalla inicial */
 .welcome-screen {
   display: flex;
   flex-direction: column;
@@ -41,11 +39,6 @@ body {
   background-color: #ff5050;
 }
 
-/* Contenido principal (oculto inicialmente) */
-.hidden {
-  display: none;
-}
-
 .main-content {
   display: flex;
   flex-direction: column;
@@ -57,24 +50,22 @@ body {
   background: url('images/fondo.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
-  overflow-y: scroll; /* Permitir desplazamiento vertical */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  overflow-y: auto; /* Habilitar desplazamiento */
 }
 
-/* Estilos del contenido principal */
 h1 {
   font-size: 3rem;
   font-weight: bold;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6); /* Sombra más fuerte para títulos */
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
   margin-bottom: 20px;
-  color: #fff;
 }
 
 p.lead {
   font-size: 1.3rem;
   color: #f8f9fa;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4); /* Sombra para texto secundario */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 #snoopy img {
@@ -87,12 +78,11 @@ p.lead {
 
 footer {
   color: #fff;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra para footer */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   font-size: 0.9rem;
   margin-top: 20px;
 }
 
-/* Corazones animados */
 .heart {
   position: absolute;
   width: 25px;
@@ -101,10 +91,9 @@ footer {
   clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 75%, 20% 100%, 0% 35%);
   animation: float-heart 5s linear infinite;
   opacity: 0.8;
-  z-index: 1000; /* Por encima del contenido */
+  z-index: 1000;
 }
 
-/* Animación de los corazones */
 @keyframes float-heart {
   0% {
     transform: scale(0.8) translateY(0);
